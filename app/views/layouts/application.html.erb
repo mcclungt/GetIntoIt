@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<% if current_user %>
+	<%= render 'user/new' %>
+<% else %>
+	<%= render 'user/sessions/new' %>
+<% end %>
+
 <%= yield %>
 
 </body>
