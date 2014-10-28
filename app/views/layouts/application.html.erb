@@ -9,9 +9,9 @@
 <body>
 
 <% if current_user %>
-	<%= render 'user/new' %>
+	<%= render 'users/new' %>
 <% else %>
-	<%= render 'user/sessions/new' %>
+	<%= render 'users/sessions/new' %>
 <% end %>
 
 <%= yield %>
