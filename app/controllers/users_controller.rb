@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
-		@problems = Problem.all
 		if @user.save
-			sign_in(@user)
+			flash[:alert] = "Success"
 			redirect_to root_path
 		else
-			alert("Email has already been taken")
+			flash.now[:alert] = "Unsuccessful Account Creation"
+			render 'new'
 		end
 	end
 
