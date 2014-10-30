@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			flash[:alert] = "Success"
-			redirect_to root_path
+			redirect_to '/users'
 		else
 			flash.now[:alert] = "Unsuccessful Account Creation"
 			render 'new'
