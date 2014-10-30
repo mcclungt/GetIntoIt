@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   resources :users
   
   post 'users/new' => 'sessions#create'
+
+delete 'logout' => 'sessions#destroy', :as => :logout
   # Example resource route with options:
   #   resources :products do
   #     member do

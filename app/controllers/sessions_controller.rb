@@ -1,7 +1,4 @@
 class SessionsController < ApplicationController
-	def show
-		
-	end
 
 	def new
 	end
@@ -13,8 +10,8 @@ class SessionsController < ApplicationController
 			session[:user_id] = @user.id
 			redirect_to '/'
 		else
-			render '/users/new'
-			flash.now[:alert] = "Invalid Login Attempt"
+			redirect_to '/'
+			flash[:alert] = "Invalid Login Attempt"
 		end
 	end
 
