@@ -8,10 +8,12 @@
 </head>
 <body>
 
-<% if current_user %>
-	<%= render '/users/new' %>
+
+<% if session[:user_id] %>
+	<%=	render 'sessions/logout' %>
 <% else %>
 	<%= render 'sessions/new' %>
+	<%= render 'users/new' %>
 <% end %>
 
 <% if flash[:alert] %>
