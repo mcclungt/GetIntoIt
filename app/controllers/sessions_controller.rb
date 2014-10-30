@@ -7,9 +7,9 @@ class SessionsController < ApplicationController
 
 		if @user && @user.authenticate(params[:password])
 			session[:user_id] = @user.id
-			redirect_to 'users/new'
+			redirect_to '/'
 		else
-			render 'new'
+			render '/users/new'
 			flash.now[:alert] = "Invalid Login Attempt"
 		end
 	end
