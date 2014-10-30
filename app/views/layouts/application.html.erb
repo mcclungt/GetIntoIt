@@ -8,11 +8,6 @@
 </head>
 <body>
 
-<% if current_user %>
-	<%= render '/users/new' %>
-<% else %>
-	<%= render 'sessions/new' %>
-<% end %>
 
 <% if flash[:alert] %>
 	<div class="alert"><%= flash[:alert] %></div>
