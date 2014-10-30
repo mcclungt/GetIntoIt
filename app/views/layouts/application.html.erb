@@ -7,10 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% unless current_user %>
-	<%= render '/sessions/new' %>
-	<%= render '/users/new' %>
-<% end %>
+
+<%= display_session_partials %>
 
 <% if flash[:alert] %>
 	<div class="alert"><%= flash[:alert] %></div>
