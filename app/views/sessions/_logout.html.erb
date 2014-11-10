@@ -1,2 +1,1 @@
-<li> <%= "logged in" %> </li>
-<li> <%= link_to "Logout", logout_path, method: :delete %> </li>
+<li>Logged in as <%= current_user.username %> <%= link_to "Logout", logout_path, method: :delete %> </li>
