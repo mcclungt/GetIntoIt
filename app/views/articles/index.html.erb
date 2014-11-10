@@ -1,0 +1,9 @@
+  <div>
+	<% @articles.each do |article| %>
+		<h2><%= link_to article.title, article  %></h2>
+		<br>
+		<h3><%= article.user.username %> - <%= time_ago_in_words(article.created_at) %></h3>
+		<br>
+		<br>
+	<% end %>
+  </div>
