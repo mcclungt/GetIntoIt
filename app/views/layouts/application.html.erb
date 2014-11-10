@@ -8,7 +8,12 @@
 </head>
 <body>
 
-<%= display_session_partials %>
+<% if session[:user_id] %>
+	<%=	render 'sessions/logout' %>
+<% else %>
+	<%= render 'sessions/new' %>
+	<%= render 'users/new' %>
+<% end %>
 
 <% if flash[:alert] %>
 	<div class="alert"><%= flash[:alert] %></div>
