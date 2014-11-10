@@ -1,0 +1,7 @@
+<div>
+	<h2><%= @article.title %></h2>
+	<br>
+	<h3><%= @article.user.username %> - <%= time_ago_in_words(@article.created_at) %></h3>
+	<br>
+	<%=  @article.body %>
+</div>
