@@ -1,1 +1,3 @@
 account creation error specific flashes
+
+Auto login on account creation
