@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base
 		return unless session[:user_id]
     	@current_user ||= User.find(session[:user_id])
   end
+
+  def require_ownership
+		if !current_user || current_user.id != Article.find(params[:id]).user_id
+			flash[:alert] = "Permission Required To Edit"
+			redirect_to root_path
+		end
+  end 
+
 end

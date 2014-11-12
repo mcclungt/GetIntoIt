@@ -4,4 +4,8 @@
 	<h3><%= @article.user.username %> - <%= time_ago_in_words(@article.created_at) %></h3>
 	<br>
 	<%=  @article.body %>
+	<br>
+		<% if current_user && current_user.id == @article.user_id %>
+		  <%= link_to "edit", edit_article_path %>
+		<% end %>
 </div>
