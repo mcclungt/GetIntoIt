@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.create(username: 'tim', password: 'farted')
 
-Article.create(title: 'here', body: 'go', user_id: 1)
+article = Article.create(title: 'here', body: 'go', user_id: 1)

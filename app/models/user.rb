@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 	has_secure_password
 	
 	has_many :articles
+	has_many :comments
 
 	before_save { self.username = username.downcase }
 end
